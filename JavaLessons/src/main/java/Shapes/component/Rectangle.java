@@ -4,24 +4,35 @@ import Shapes.Shape;
 
 public class Rectangle extends Shape
 {
-    private int secondSide; //length of another side of square
+    private static final String shapeName = "Rectangle";
+    protected int sideA;
+    protected int sideB;
 
-    public void setSecondSide(int secondSide) {
-        this.secondSide = secondSide;
+    public void setSideA(int sideA) {
+        this.sideA = sideA;
     }
 
-    public int getSecondSide() {
-        return secondSide;
+    public int getSideA() {
+        return sideA;
+    }
+
+    public void setSideB(int sideB) {
+        this.sideB = sideB;
+    }
+
+    public int getSideB() {
+        return sideB;
     }
 
 
-    public Rectangle(int side, int secondSide) {
-        super(side);
-        this.secondSide = secondSide;
+    public Rectangle(int sideA, int sideB) {
+        super();
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override
     public double shapeArea() {
-        return super.getSide() * secondSide;
+        return sideA * sideB;
     }
 }

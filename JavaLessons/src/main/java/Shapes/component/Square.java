@@ -6,15 +6,9 @@ package Shapes.component;
  */
 public class Square extends Rectangle
 {
-    public Square(int a) {
-        super(a,a);
+    private static final String shapeName = "Square";
+    public Square(int sideA) {
+        super(sideA, sideA);
     }
-
-    @Override
-    public double shapeArea() {
-        return Math.pow(super.getSide(), 2);
-    }
-    //todo: как сделать одну сторону равной другой
-
 
 }

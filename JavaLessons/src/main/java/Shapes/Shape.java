@@ -2,20 +2,14 @@ package Shapes;
 
 public abstract class Shape
 {
-    private int side; //lenth of one side for shape (or radius for circle)
+    protected String shapeName;
 
-    public Shape(int side) {
-        this.side = side;
-    }
-
-    public int getSide() {
-        return side;
-    }
-
-    public void setA() {
-        this.side = side;
-    }
+    public Shape() {}
 
     public abstract double shapeArea();
+
+    public String getShapeName() {
+        return shapeName;
+    }
 
 }

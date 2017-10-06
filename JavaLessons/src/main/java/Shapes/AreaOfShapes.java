@@ -10,18 +10,26 @@ import javax.swing.JFrame;
 public class AreaOfShapes
 {
     public static void main(String[] args) {
-        // Создаем объект родительского класса, который будет работать с классами потомками
-        Shape triangle = new Triangle(5,7);
-        System.out.println("Area of triangle = " + triangle.shapeArea());
 
-        Shape rectangle = new Rectangle(2,5);
-        System.out.println("Area of rectangle = " + rectangle.shapeArea());
+        Triangle triangle = new Triangle(5,7);
+        print(triangle);
 
-        Shape circle = new Circle(10);
-        System.out.println("Area of circle = " + circle.shapeArea());
+        Triangle triangle1 = new Triangle(3,4,5);
+        print(triangle1);
 
-        Shape square = new Square(7);
-        System.out.println("Area of square = " + square.shapeArea());
+        Rectangle rectangle = new Rectangle(2,5);
+        print(rectangle);
 
+        Circle circle = new Circle(10);
+        print(circle);
+
+        Square square = new Square(7);
+        print(square);
+
+    }
+
+    public static void print(Shape shape) {
+        System.out.println("Shape is " + shape.getClass() + "  " + shape.getShapeName() + "   " + "Area = " + shape
+                .shapeArea());
     }
 }
