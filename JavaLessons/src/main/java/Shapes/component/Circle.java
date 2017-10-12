@@ -5,10 +5,10 @@ import Shapes.Shape;
 public class Circle extends Shape {
 
     private int radius;
-    private static final String shapeName = "Circle";
+    //private String shapeName = "Circle";
 
-    public Circle(int radius) {
-        super();
+    public Circle(int radius, String shapeName) {
+        super(shapeName);
         this.radius = radius;
     }
 

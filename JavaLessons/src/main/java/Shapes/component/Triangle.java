@@ -1,6 +1,8 @@
 package Shapes.component;
 
 import Shapes.Shape;
+import com.oracle.jrockit.jfr.InvalidValueException;
+import org.omg.CORBA.DynAnyPackage.InvalidValue;
 
 public class Triangle extends Shape
 {
@@ -12,17 +14,21 @@ public class Triangle extends Shape
     private double semiPerimeter;
 
 
-    public Triangle(int sideA, int height) {
-        super();
+    public Triangle(int sideA, int height, String shapeName) {
+        super(shapeName);
         this.sideA = sideA;
         this.height = height;
     }
 
-    public Triangle(int sideA, int sideB, int sideC) {
-        super();
+    public Triangle(int sideA, int sideB, int sideC, String shapeName) {
+        super(shapeName);
+//        if (sideA <= 0){
+//            throw new InvalidValueException("Side A cant be negative");
+//        }                                                             //todo find exception
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
+//    }
     }
 
     @Override

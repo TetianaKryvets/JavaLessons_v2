@@ -4,7 +4,7 @@ import Shapes.Shape;
 
 public class Rectangle extends Shape
 {
-    private static final String shapeName = "Rectangle";
+    //private String shapeName;
     protected int sideA;
     protected int sideB;
 
@@ -25,8 +25,8 @@ public class Rectangle extends Shape
     }
 
 
-    public Rectangle(int sideA, int sideB) {
-        super();
+    public Rectangle(int sideA, int sideB, String shapeName) {
+        super(shapeName);
         this.sideA = sideA;
         this.sideB = sideB;
     }
