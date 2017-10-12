@@ -11,10 +11,10 @@ public class AreaOfShapes
 {
     public static void main(String[] args) {
 
-        Triangle triangle = new Triangle(5,7,"");         //todo: ask Andriy
+        Triangle triangle = new Triangle(5,7,"Triangle");
         print(triangle);
 
-        Triangle triangle1 = new Triangle(3,4,5, "");
+        Triangle triangle1 = new Triangle(3,4,5, "Triangle-1");
         print(triangle1);
 
         Rectangle rectangle = new Rectangle(2,5, "Rectangle");

@@ -1,12 +1,13 @@
 package Shapes.component;
 
 import Shapes.Shape;
-import com.oracle.jrockit.jfr.InvalidValueException;
+import com.sun.org.apache.xpath.internal.operations.Or;
 import org.omg.CORBA.DynAnyPackage.InvalidValue;
+import java.lang.Exception.*;
 
 public class Triangle extends Shape
 {
-    private String shapeName = "Triangle";
+    //private String shapeName = "Triangle";
     private int sideA;
     private int sideB;
     private int sideC;
@@ -14,21 +15,25 @@ public class Triangle extends Shape
     private double semiPerimeter;
 
 
-    public Triangle(int sideA, int height, String shapeName) {
+    public Triangle(int sideA, int height, String shapeName) throws IllegalArgumentException{
         super(shapeName);
+        if ((sideA < 0)||(height < 0)) {
+            throw new IllegalArgumentException("Triangle side or height can't be negative");
+        }
         this.sideA = sideA;
         this.height = height;
     }
 
-    public Triangle(int sideA, int sideB, int sideC, String shapeName) {
+    public Triangle(int sideA, int sideB, int sideC, String shapeName) throws IllegalArgumentException{
         super(shapeName);
-//        if (sideA <= 0){
-//            throw new InvalidValueException("Side A cant be negative");
-//        }                                                             //todo find exception
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.sideC = sideC;
-//    }
+        if ((sideA <= 0) || (sideB <= 0)|| (sideB <= 0)) {
+            throw new IllegalArgumentException("Triangle side can't be negative");
+        }else {
+            this.sideA = sideA;
+            this.sideB = sideB;
+            this.sideC = sideC;
+        }
+
     }
 
     @Override

@@ -11,15 +11,11 @@ import static junit.framework.Assert.assertEquals;
  */
 public class ShapeArrayTest {
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test
     public void testAreaIsCorrect() {
-        assertEquals("Area of triangle is incorrect", (new Triangle(-5, 7,-5)).shapeArea(), 17.5);
-        assertEquals("Area of triangle is incorrect", (new Triangle(3,4,5)).shapeArea(), 6.0);
-        assertEquals("Area of triangle is incorrect", (new Rectangle(-2,5)).shapeArea(), 10);
-
-
-
-
+        assertEquals("Area of triangle is incorrect", (new Triangle(3,4,5,"Triangle")).shapeArea(), 6.0);
+        assertEquals("Area of triangle is incorrect", (new Triangle(3,5,"Triangle")).shapeArea(), 7.5);
+        assertEquals("Area of triangle is incorrect", (new Rectangle(2,-5,"Rectangle")).shapeArea(), 10.0);
     }
 
 

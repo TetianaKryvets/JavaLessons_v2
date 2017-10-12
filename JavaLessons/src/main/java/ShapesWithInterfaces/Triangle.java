@@ -5,7 +5,7 @@ package ShapesWithInterfaces;
  * Date: 10/10/17
  */
 class Triangle implements Shape{
-    private String shapeName = "Triangle";
+    private String shapeName;
     private int sideA;
     private int sideB;
     private int sideC;

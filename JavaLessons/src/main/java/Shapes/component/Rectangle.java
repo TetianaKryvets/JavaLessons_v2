@@ -25,10 +25,14 @@ public class Rectangle extends Shape
     }
 
 
-    public Rectangle(int sideA, int sideB, String shapeName) {
+    public Rectangle(int sideA, int sideB, String shapeName) throws IllegalArgumentException{
         super(shapeName);
-        this.sideA = sideA;
-        this.sideB = sideB;
+        if ((sideA < 0)||(sideB < 0))  {
+            throw new IllegalArgumentException("Any side of Rectangle can not be negative");
+        } else {
+            this.sideA = sideA;
+            this.sideB = sideB;
+        }
     }
 
     @Override
