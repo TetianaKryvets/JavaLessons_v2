@@ -3,6 +3,7 @@ package CommercialDeal;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+//import org.junit.Before;
 
 /**
  * User: tetiana.kryvets
@@ -33,19 +34,26 @@ public class main {
         ShoesProduct shoes1 = new ShoesProduct("Shoes1", 200, 1, 35, "green");
         ShoesProduct shoes2 = new ShoesProduct("Shoes1", 500, 1, 35, "red");
 
-        Product[] productsArray = new Product[4];
+        //todo: how to output digital value, megapx, size and colour?
+
+        Product[] productsArray = new Product[1]; //todo: is it possible to initialize without size
 
         productsArray[0] = camera1;
-        productsArray[1] = camera2;
-        productsArray[2] = shoes1;
-        productsArray[3] = shoes2;
+//        productsArray[1] = camera2;
+//        productsArray[2] = shoes1;
+//        productsArray[3] = shoes2;
 
         //input Deal:
-        //Deal deal = createDeal(buyer, seller, productsArray);
+        Deal deal = createDeal(buyer, seller, productsArray);
+        System.out.println("Total sum = " + deal.getSum());
+
+        //Assert
+
+
 
 
        //Input and output array of deals:
-        Deal[] deals = createArrayOfDeals(seller, buyer, productsArray);
+        //Deal[] deals = createArrayOfDeals(seller, buyer, productsArray);
 
     }
 
