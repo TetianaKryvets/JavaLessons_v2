@@ -48,4 +48,17 @@ public class StringWithCapitalLetters {
         }
        return  new String(charArray);
     }
+
+    //Andriy Lysenko method:
+    private static String printCapitalized(String input){
+        String[] strArray = input.split("");
+        strArray[0] = strArray[0].toUpperCase();
+
+        for (int i = 0; i < strArray.length - 1; i++){
+            if (strArray[i].equals(" ")){
+                strArray[i + 1] = strArray[i + 1].toUpperCase();
+            }
+        }
+        return String.join("", strArray);
+    }
 }
