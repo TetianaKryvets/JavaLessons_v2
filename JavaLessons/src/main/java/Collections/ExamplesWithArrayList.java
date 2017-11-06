@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * User: tetiana.kryvets
  * Date: 10/29/17
  */
-public class Example1WithArrayList {
+public class ExamplesWithArrayList {
 
     public static void main (String[] arg) {
         ArrayList<String> arrList = new ArrayList();
@@ -21,6 +21,12 @@ public class Example1WithArrayList {
         for (int i=0; i<arrList.size(); i++) {
             System.out.println(arrList.toArray()[i]);
         }
+//            if ((arrList.get(i) % 2) == 1) {
+//// odd
+//            } else {
+//                System.out.println("Please enter an odd number!");
+//            }
+//        }
 
         //output2:
         for (String element : arrList) {
@@ -50,5 +56,4 @@ public class Example1WithArrayList {
 
 
     }
-
 }
