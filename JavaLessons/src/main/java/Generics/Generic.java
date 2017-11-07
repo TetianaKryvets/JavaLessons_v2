@@ -7,6 +7,8 @@ import java.util.List;
  * User: tetiana.kryvets
  * Date: 11/6/17
  */
+
+//write a programm using Generic Method to do substring from String and from Integer objects
 public class Generic<T> {
     protected T obj;
 

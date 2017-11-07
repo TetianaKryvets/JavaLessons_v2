@@ -7,6 +7,9 @@ import java.util.List;
  * User: tetiana.kryvets
  * Date: 11/6/17
  */
+
+//class for Generic methods
+
 public class Utilities {
     public static <T> void fill(ArrayList<T> list, T val) {
         for (int i = 0; i < list.size(); i++){
