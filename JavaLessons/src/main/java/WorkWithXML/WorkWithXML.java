@@ -1,4 +1,4 @@
-package Files;
+package WorkWithXML;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -30,7 +30,7 @@ import java.io.IOException;
 public class WorkWithXML {
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
         
-        File f = new File("C:/Kryvets/TA_development/JavaLessons/JavaLessons/src/main/java/Files/xx1.xml");
+        File f = new File("C:/Kryvets/TA_development/JavaLessons/JavaLessons/src/main/java/WorkWithXML/xx1.xml");
         // Создается построитель документа
         DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -111,7 +111,7 @@ public class WorkWithXML {
     private static void writeDocument(Document document) throws TransformerFactoryConfigurationError, TransformerException, FileNotFoundException {
         Transformer tr = TransformerFactory.newInstance().newTransformer();
         DOMSource source = new DOMSource(document);
-        FileOutputStream fos = new FileOutputStream("C:/Kryvets/TA_development/JavaLessons/JavaLessons/src/main/java/Files/other.xml");
+        FileOutputStream fos = new FileOutputStream("C:/Kryvets/TA_development/JavaLessons/JavaLessons/src/main/java/WorkWithXML/other.xml");
         StreamResult result = new StreamResult(fos);
         tr.transform(source, result);
     }
