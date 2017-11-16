@@ -1,6 +1,7 @@
 package Generics;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -31,6 +32,23 @@ public class Utilities {
     public static <T> String doSubString(Generic<T> str, int i, int j) {
         String subString = str.getObj().toString().substring(i,j);
         return subString;
+    }
+
+    public static <T> Integer findMaxElement(ArrayList<T> list, int i, int j) {
+        int maxValue = 0;
+
+        return maxValue;
+    }
+
+    public static <T> Integer findMinElement(ArrayList<T> list) {
+        T maxValue = list.get(0);
+        for (int i=1; i < list.size(); i ++ ) {
+
+            if ((Integer)list.get(i) < (Integer) maxValue) {
+                maxValue = list.get(i);
+            }
+        }
+        return (Integer) maxValue;
     }
 
 }
