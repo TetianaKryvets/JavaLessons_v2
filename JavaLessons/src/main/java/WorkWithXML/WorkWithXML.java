@@ -24,9 +24,7 @@ import java.io.IOException;
 
     //1. parsing   (DOM -> набор элементов типа Node: стандартные объекты DOM — Node, NodeList. класс Element -
 // наследник класса Node)
-    //2. search an element
-    //3. verification
-    //4. update/modification
+
 public class WorkWithXML {
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
         
@@ -49,30 +47,6 @@ public class WorkWithXML {
         addNewElement(document);
 
 
-        //-----------------------------------------------------------------------//
-
-//        //Case2:
-//        Node rootNode = document.getDocumentElement();
-//
-//        System.out.println("List of books:");
-//        System.out.println();
-//        // Просматриваем все подэлементы корневого - т.е. книги
-//        NodeList books = rootNode.getChildNodes();
-//        for (int i = 0; i < books.getLength(); i++) {
-//            Node book = books.item(i);
-//            // Если нода не текст, то это книга - заходим внутрь
-//            if (book.getNodeType() != Node.TEXT_NODE) {
-//                NodeList bookProps = book.getChildNodes();
-//                for(int j = 0; j < bookProps.getLength(); j++) {
-//                    Node bookProp = bookProps.item(j);
-//                    // Если нода не текст, то это один из параметров книги - печатаем
-//                    if (bookProp.getNodeType() != Node.TEXT_NODE) {
-//                        System.out.println(bookProp.getNodeName() + ":" + bookProp.getChildNodes().item(0).getTextContent());
-//                    }
-//                }
-//                System.out.println("===========>>>>");
-//            }
-//        }
 
     }
 
