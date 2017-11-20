@@ -18,7 +18,7 @@ import java.io.IOException;
  * Date: 11/17/2017
  */
 
-//  	  Bookx – title, author, data
+//  	  Books – title, author, data
 //        parse catalog,
 //           - receive the list of all books.
 //           - receive the list of books with author: Author
