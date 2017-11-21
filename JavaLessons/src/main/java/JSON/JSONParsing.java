@@ -15,6 +15,9 @@ import java.util.Iterator;
  * User: tetiana.kryvets
  * Date: 11/21/2017
  */
+
+//parse JSON document and print all info
+    
 public class JSONParsing {
     public static void main(String[] args) throws IOException, ParseException {
         String jsonStrusture = "";
