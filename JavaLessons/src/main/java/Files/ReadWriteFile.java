@@ -8,8 +8,7 @@ import java.io.*;
  */
 public class ReadWriteFile {
     public static void main(String[] args) throws IOException {
-        File newFile = new File("C:/Kryvets/TA_development/JavaLessons/JavaLessons/src/main/java/Files/Test" +
-                ".txt");
+        File newFile = new File("/src/main/java/Files/Test.txt");
 
         writeToFile(newFile);
         readFromFile(newFile);

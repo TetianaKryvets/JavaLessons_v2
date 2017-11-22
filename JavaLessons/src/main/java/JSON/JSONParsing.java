@@ -26,7 +26,7 @@ public class JSONParsing {
         JSONParser parser = new JSONParser();
         //create Object
         JSONFileObject = parser.parse(new FileReader
-                ("C://Kryvets/TA_development/JavaLessons/JavaLessons/src/main/java/JSON/JSONExample1.json"));
+                ("src/main/java/JSON/JSONExample1.json"));
         //create JSON Object
         JSONObject jsonObj = (JSONObject)JSONFileObject;
         //print PageName and PagePic:
