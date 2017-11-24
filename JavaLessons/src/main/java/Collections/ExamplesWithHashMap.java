@@ -8,6 +8,11 @@ import java.util.Map;
  * User: tetiana.kryvets
  * Date: 11/3/17
  */
+
+//TASKS:
+    //1. Write a Java program to count the number of key-value (size) mappings in a map.
+    //2. white a program to find the second pair key-value
+    //3. white a program to output HashMap
 public class ExamplesWithHashMap {
     public static void main(String[] args) {
         HashMap<Integer,String> hm = new HashMap<Integer, String>();

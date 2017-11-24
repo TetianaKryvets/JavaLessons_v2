@@ -16,22 +16,6 @@ public class FotoProduct extends Product {
 
     private final int Disc = 20;
 
-    public double getMegapx() {
-        return megapx;
-    }
-
-    public void setMegapx(double megapx) {
-        this.megapx = megapx;
-    }
-
-    public boolean getDigital() {
-        return digital;
-    }
-
-    public void setDigital(boolean digital) {
-        this.digital = digital;
-    }
-
     @Override
     public double getCost() {
 

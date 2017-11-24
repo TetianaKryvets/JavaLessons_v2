@@ -9,6 +9,8 @@ import java.io.InputStreamReader;
  * Date: 9/11/17
  * Search element value by index
  */
+
+//TASK: Search element value by index
 public class ArrayFindElementByIndex {
     public static void main (String[] arg ) throws IOException {
 

@@ -4,6 +4,9 @@ package Arrays;
  * User: tetiana.kryvets
  * Date: 7/30/17
  */
+
+// TASK: change element placement by diagonal
+
 public class ArrayCopyInOppositeWay {
     public static void main(String[] args) {
 

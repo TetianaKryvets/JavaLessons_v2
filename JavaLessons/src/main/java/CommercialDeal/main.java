@@ -9,16 +9,19 @@ import java.io.InputStreamReader;
  * User: tetiana.kryvets
  * Date: 8/21/17
  */
+
+//TASK:
+    // We have a deal between buyer and seller. Deal contain two types of products: FotoProduct and ShoesProduct
+    // Calculate total sum of the deal
+
 public class main {
 
     public static void main(String args[]) throws IOException {
 
         //Input buyer и seller names:
-//        Party buyer = inputParty();
         Party buyer = new Party();
         buyer.setName("Buyer");
 
-       // Party seller = inputParty();
         Party seller = new Party();
         seller.setName("Seller");
 
@@ -34,26 +37,20 @@ public class main {
         ShoesProduct shoes1 = new ShoesProduct("Shoes1", 200, 1, 35, "green");
         ShoesProduct shoes2 = new ShoesProduct("Shoes1", 500, 1, 35, "red");
 
-        //todo: how to output digital value, megapx, size and colour?
 
-        Product[] productsArray = new Product[1]; //todo: is it possible to initialize without size
+        Product[] productsArray = new Product[1];
 
         productsArray[0] = camera1;
-//        productsArray[1] = camera2;
-//        productsArray[2] = shoes1;
-//        productsArray[3] = shoes2;
+        productsArray[1] = camera2;
+        productsArray[2] = shoes1;
+        productsArray[3] = shoes2;
 
         //input Deal:
         Deal deal = createDeal(buyer, seller, productsArray);
         System.out.println("Total sum = " + deal.getSum());
 
-        //Assert
-
-
-
-
-       //Input and output array of deals:
-        //Deal[] deals = createArrayOfDeals(seller, buyer, productsArray);
+        //Input and output array of deals:
+        Deal[] deals = createArrayOfDeals(seller, buyer, productsArray);
 
     }
 
@@ -71,82 +68,6 @@ public class main {
         return party;
     }
 
-//    public static FotoProduct inputFotoProduct() throws IOException {
-//
-//        FotoProduct fotoProduct = new FotoProduct();  //constructor has been change
-//
-//        BufferedReader reader = new BufferedReader( new InputStreamReader(System.in));
-//        System.out.println("Input product title:");
-//        String productName = reader.readLine();
-//        fotoProduct.setTitle(productName);
-//
-//        System.out.println("Input product price:");
-//        double productPrice = Double.parseDouble(reader.readLine().trim());
-//        fotoProduct.setPrice(productPrice);
-//
-//        System.out.println("Input product q-ty:");
-//        int productQty = Integer.parseInt(reader.readLine());
-//        fotoProduct.setQuantity(productQty);
-//
-//        System.out.println("Is digital?");
-//        boolean isDigital = Boolean.parseBoolean(reader.readLine());
-//        fotoProduct.setDigital(isDigital);
-//
-//        System.out.println("Input megapx:");
-//        double megapx = Double.parseDouble(reader.readLine());
-//        fotoProduct.setMegapx(megapx);
-//
-//        return fotoProduct;
-//    }
-
-//    public static ShoesProduct inputBotinkiProduct() throws IOException {
-//        ShoesProduct botinkiProduct = new ShoesProduct();  //   ShoesProduct constructor has been change
-//
-//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-//        System.out.println("");
-//
-//        System.out.println("Input product title:");
-//        String productName = reader.readLine();
-//        botinkiProduct.setTitle(productName);
-//
-//        System.out.println("Input product price:");
-//        double productPrice = Double.parseDouble(reader.readLine().trim());
-//        botinkiProduct.setPrice(productPrice);
-//
-//        System.out.println("Input product q-ty:");
-//        int productQty = Integer.parseInt(reader.readLine());
-//        botinkiProduct.setQuantity(productQty);
-//
-//        System.out.println("Input size: ");
-//        int procustSize = Integer.parseInt(reader.readLine());
-//        botinkiProduct.setSize(procustSize);
-//
-//        System.out.println("Input colour");
-//        String productColour = reader.readLine();
-//        botinkiProduct.setColour(productColour);
-//
-//        return botinkiProduct;
-//
-//    }
-
-//    public static FotoProduct[] createArrayOfFotoProducts() throws IOException {
-//        FotoProduct[] fotoProductsArr = new FotoProduct[1];
-//        for (int i=0; i<fotoProductsArr.length; i++) {
-//            FotoProduct fotoProduct = inputFotoProduct();
-//            fotoProductsArr[i] = fotoProduct;
-//        }
-//        return fotoProductsArr;
-//    }
-
-//    public static ShoesProduct[] createArrayOfBotinkiProducts() throws IOException {
-//        ShoesProduct[] botinkiProductsArr = new ShoesProduct[1];
-//        for (int j=0; j<botinkiProductsArr.length; j++) {
-//            ShoesProduct botinkiProduct = inputBotinkiProduct();
-//            botinkiProductsArr[j] =  botinkiProduct;
-//        }
-//        return botinkiProductsArr;
-//
-//    }
 
     public static Product[] joinArrays(FotoProduct[] fotoProductsArr, ShoesProduct[] botinkiProductsArr) {
         Product[] prArray = new Product[fotoProductsArr.length + botinkiProductsArr.length];
@@ -182,32 +103,19 @@ public class main {
     }
 
 
-//    public static void outputDeal(Deal deal) {
-//        for (int i=0; i<productsArray.length; i++) {
-//            for (Product pr: deals[i].getProducts())  {
-//                System.out.print("Product: " + pr.getTitle() + " Product Cost: " + pr.getPrice() + " Product q-ty: "
-//                        + pr.getQuantity());
-//                System.out.println("");
-//
-//            }
-//            System.out.println("Total sum:" + deals[i].getSum());
-//
-//    }
+    public static void outputArrayOfDeals(Deal[] deals, Product[] productsArray) {
+        for (int i=0; i<productsArray.length; i++) {
+            for (Product pr: deals[i].getProducts())  {
+                System.out.print("Product: " + pr.getTitle() + " Product Cost: " + pr.getPrice() + " Product q-ty: "
+                        + pr.getQuantity());
+                System.out.println("");
 
+            }
+            System.out.println("Total sum:" + deals[i].getSum());
 
-//    public static void outputArrayOfDeals(Deal[] deals, Product[] productsArray) {
-//        for (int i=0; i<productsArray.length; i++) {
-//            for (Product pr: deals[i].getProducts())  {
-//                System.out.print("Product: " + pr.getTitle() + " Product Cost: " + pr.getPrice() + " Product q-ty: "
-//                        + pr.getQuantity());
-//                System.out.println("");
-//
-//            }
-//            System.out.println("Total sum:" + deals[i].getSum());
-//
-//    }
-//
-//    }
+    }
+
+    }
 
 }
 

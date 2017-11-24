@@ -8,15 +8,15 @@ import java.io.InputStreamReader;
  * User: tetiana.kryvets
  * Date: 7/25/17
  * Time: 9:08 AM
- * Search number of element (index) by element value
  */
+
+//TASK: Search number of element (index) by element value
+
 public class ArrayFindIndexOfElementByElementValue {
 
     public static void main (String[] arg ) throws IOException {
 
         int[] array = {0,3,-6,12,8,10,-6,23};
-
-        //int n=0;
 
         //Enter n value manually:
         System.out.println("Enter a value:");

@@ -44,8 +44,7 @@ public class Generic<T> {
 
 
         String newStr = Utilities.doSubString(stringGeneric, 2, 5);
-        System.out.println("New substring: " + newStr);       //Output: New substring: Generics
-        // .Generi
+        System.out.println("New substring: " + newStr);
 
         String newIntStr = Utilities.doSubString(intGeneric, 2, 4);
         System.out.println("New sub-string from Integer: " + newIntStr);

@@ -14,7 +14,6 @@ import java.util.Arrays;
 public class FindMaxElement {
 
     public static void main(String[] args) {
-        int maxValue = 0;
         int minValue = 0;
         int minValueInNumberArray = 0;
 

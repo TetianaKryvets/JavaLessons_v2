@@ -7,14 +7,9 @@ import java.util.Date;
  * Date: 8/21/17
  */
 public class Deal {
-    private Date date;
     private Party buyer;
     private Party seller;
     private Product[] products;
-
-    public Date getDate() {
-        return date;
-    }
 
     public Party getBuyer() {
         return buyer;
@@ -29,7 +24,6 @@ public class Deal {
     }
 
     public Deal(Party seller, Party buyer, Product[] products) {
-        date = new Date();//конструктор, сразу устанавливает в текущую дату
         this.seller = seller;
         this.buyer = buyer;
         this.products = products;

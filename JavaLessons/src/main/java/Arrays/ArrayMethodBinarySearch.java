@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
  * User: tetiana.kryvets
  * Date: 7/30/17
  */
+//TASK: find a value using binary Search
 public class ArrayMethodBinarySearch {
 
     public static void main (String[] arg ) throws IOException {
@@ -20,7 +21,7 @@ public class ArrayMethodBinarySearch {
     String numa = reader.readLine();
     int n = Integer.parseInt(numa);
 
-    //отсортируем массив
+    //sorting
         for (int j = array.length - 1; j >= 2; j--) {
             boolean sorted = true;
             for (int i=0; i<j; i++) {
@@ -40,9 +41,9 @@ public class ArrayMethodBinarySearch {
             System.out.print(array[j] + " ");
         }
 
-        //метод золотого сечения
-        if (BinarySearch (new int[]{0,3,6,12,8,10,16,23}, n)==-1) System.out.println("Элемент не найден");
-        else System.out.println("Элемент - " + BinarySearch (new int[]{0,3,6,12,8,10,16,23}, n));
+        //BinarySearch
+        if (BinarySearch (new int[]{0,3,6,12,8,10,16,23}, n)==-1) System.out.println("Element is not found");
+        else System.out.println("Element: " + BinarySearch (new int[]{0,3,6,12,8,10,16,23}, n));
 
     }
 

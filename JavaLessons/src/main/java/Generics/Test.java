@@ -9,7 +9,6 @@ import java.util.List;
  */
 
 //Write a program using Generic methods:
-//     - method "fill" set '0' for all elements of ArrayList
 //     - method "exchangePosition" changes the values of two adjacent elements
 
 public class Test {
@@ -18,13 +17,8 @@ public class Test {
         intList.add("aaaa");
         intList.add("bbbb");
         intList.add("ccccc");
-        System.out.println("Список до обработки дженерик-методом: " + intList);
+        System.out.println("List of Elements: " + intList);
 
-
-
-        //Utilities.fill(intList, 0);
-        System.out.println("Список после обработки дженерик-методом: "
-                + intList);
 
         Utilities.exchangePosition(intList, 1, 2);
         System.out.println("ExchangePosition: " + intList);

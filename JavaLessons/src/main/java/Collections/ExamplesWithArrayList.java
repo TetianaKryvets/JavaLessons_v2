@@ -6,6 +6,14 @@ import java.util.ArrayList;
  * User: tetiana.kryvets
  * Date: 10/29/17
  */
+
+//TASKS:
+//1. Write a Java program to retrieve an element (at a specified index) from a given array list
+//2. Write a Java program to update specific array element by given element
+//3. Write a Java program to search an element in a array list.
+//4. Write a Java program to replace the second element of a ArrayList with the specified element.
+
+
 public class ExamplesWithArrayList {
 
     public static void main (String[] arg) {
@@ -21,12 +29,6 @@ public class ExamplesWithArrayList {
         for (int i=0; i<arrList.size(); i++) {
             System.out.println(arrList.toArray()[i]);
         }
-//            if ((arrList.get(i) % 2) == 1) {
-//// odd
-//            } else {
-//                System.out.println("Please enter an odd number!");
-//            }
-//        }
 
         //output2:
         for (String element : arrList) {

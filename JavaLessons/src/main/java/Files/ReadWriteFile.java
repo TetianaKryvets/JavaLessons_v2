@@ -6,6 +6,9 @@ import java.io.*;
  * User: tetiana.kryvets
  * Date: 11/16/2017
  */
+
+//TASK: Read from File, write to file
+
 public class ReadWriteFile {
     public static void main(String[] args) throws IOException {
         File newFile = new File("/src/main/java/Files/Test.txt");
@@ -20,10 +23,8 @@ public class ReadWriteFile {
     public static String readFromFile(File newFile) throws IOException {
         StringBuilder sb = new StringBuilder();
 
-            //Объект для чтения файла в буфер
             BufferedReader in = new BufferedReader(new FileReader( newFile.getAbsoluteFile()));
             try {
-                //В цикле построчно считываем файл
                 String s;
                 while ((s = in.readLine()) != null) {
                     sb.append(s);
@@ -35,7 +36,6 @@ public class ReadWriteFile {
 
             System.out.println("Data from file: " + sb);
 
-        //Возвращаем полученный текст с файла
         return sb.toString();
     }
 

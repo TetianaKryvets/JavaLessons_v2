@@ -8,6 +8,12 @@ import java.util.LinkedList;
  * User: tetiana.kryvets
  * Date: 10/29/17
  */
+
+// TASKS:
+    //1. Write a Java program to append the specified element to the end of a linked list.
+    //2. Write a Java program to iterate through all elements in a linked list.
+    //3. Write a Java program to iterate through all elements in a linked list starting at the specified position.
+
 public class ExamplesWithLinkedList {
     public static void main(String[] arg) {
         LinkedList linkedArray = new LinkedList();
