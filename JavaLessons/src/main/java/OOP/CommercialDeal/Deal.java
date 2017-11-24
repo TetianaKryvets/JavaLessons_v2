@@ -1,6 +1,4 @@
-package CommercialDeal;
-
-import java.util.Date;
+package OOP.CommercialDeal;
 
 /**
  * User: tetiana.kryvets

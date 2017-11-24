@@ -1,4 +1,4 @@
-package CommercialDeal;
+package OOP.CommercialDeal;
 
 /**
  * User: tetiana.kryvets

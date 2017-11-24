@@ -1,5 +1,5 @@
-import Shapes.component.Rectangle;
-import Shapes.component.Triangle;
+import OOP.Shapes.component.Rectangle;
+import OOP.Shapes.component.Triangle;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handbooks>
+    <handbook alias="default">
+        <customerName>A-Andriy</customerName>
+        <name>employee-handbook</name>
+        <displayName>Employee Handbook</displayName>
+        <id>729</id>
+    </handbook>
+</handbooks>

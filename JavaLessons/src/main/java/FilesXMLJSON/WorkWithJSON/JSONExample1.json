@@ -1,0 +1,22 @@
+{
+  "pageInfo": {
+    "pageName": "abc",
+    "pagePic": "http://example.com/content.jpg"
+  },
+  "posts": [
+    {
+      "post_id": "123",
+      "nameOfPersonWhoPosted": "Jane Doe",
+      "message": "Sounds cool. Can't wait to see it!",
+      "likesCount": "2",
+      "comments": "some comments"
+    },
+    {
+      "post_id": "678",
+      "nameOfPersonWhoPosted": "Jane1 Doe2",
+      "message": "TEst comments",
+      "likesCount": "233",
+      "comments": "one more comments"
+    }
+  ]
+}
