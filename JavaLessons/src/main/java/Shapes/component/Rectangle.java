@@ -4,7 +4,6 @@ import Shapes.Shape;
 
 public class Rectangle extends Shape
 {
-    //private String shapeName;
     protected int sideA;
     protected int sideB;
 

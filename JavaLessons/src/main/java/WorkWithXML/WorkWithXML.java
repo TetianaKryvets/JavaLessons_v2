@@ -22,26 +22,19 @@ import java.io.IOException;
  * Date: 11/16/2017
  */
 
-    //1. parsing   (DOM -> набор элементов типа Node: стандартные объекты DOM — Node, NodeList. класс Element -
-// наследник класса Node)
+    //1. parsing of XML Document
 
 public class WorkWithXML {
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
         
-        File f = new File("C:/Kryvets/TA_development/JavaLessons/JavaLessons/src/main/java/WorkWithXML/xx1.xml");
-        // Создается построитель документа
-        DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
+        File f = new File("src/main/java/WorkWithXML/xx1.xml");
+        DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 
-        //// Создается дерево DOM документа из файла
         Document document = builder.parse(f);
-        // Получаем корневой элемент
         //Case1:
         Element root = document.getDocumentElement();
-        // для простоты сразу берем message
         Element message = (Element) root.getElementsByTagName("handbook").item(0);
-        String textContent = message.getTextContent(); // тоже для упрощения
+        String textContent = message.getTextContent();
         System.out.println(textContent);
 
         addNewElement(document);
@@ -51,10 +44,8 @@ public class WorkWithXML {
     }
 
     public static void addNewElement(Document document) throws TransformerException, FileNotFoundException {
-        // Получаем корневой элемент
         Node rootNode = document.getDocumentElement();
 
-        // Создаем нновый элемент
         Element handbook = document.createElement("handbook");
 
         Element customerName = document.createElement("customerName");
@@ -69,7 +60,7 @@ public class WorkWithXML {
         Element id = document.createElement("id");
         id.setTextContent("888");
 
-        // Добавляем внутренние элементы
+        // add new elements
         handbook.appendChild(customerName);
         handbook.appendChild(hbName);
         handbook.appendChild(displayName);
@@ -77,7 +68,7 @@ public class WorkWithXML {
 
         rootNode.appendChild(handbook);
 
-        // Записываем XML в файл
+        // write to XML file
         writeDocument(document);
 
     }
@@ -85,7 +76,7 @@ public class WorkWithXML {
     private static void writeDocument(Document document) throws TransformerFactoryConfigurationError, TransformerException, FileNotFoundException {
         Transformer tr = TransformerFactory.newInstance().newTransformer();
         DOMSource source = new DOMSource(document);
-        FileOutputStream fos = new FileOutputStream("C:/Kryvets/TA_development/JavaLessons/JavaLessons/src/main/java/WorkWithXML/other.xml");
+        FileOutputStream fos = new FileOutputStream("src/main/java/WorkWithXML/other.xml");
         StreamResult result = new StreamResult(fos);
         tr.transform(source, result);
     }

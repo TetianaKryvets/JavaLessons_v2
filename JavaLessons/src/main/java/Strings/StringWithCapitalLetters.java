@@ -1,4 +1,4 @@
-package OCAExample;
+package Strings;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
  */
 
 /*
-
+TASK:
 To "capitalize" a string means to change the first letter of each word in the string
  to upper case (if it is not already upper case). For example, a capitalized version
  of "Now is the time to act!" is "Now Is The Time To Act!".

@@ -6,7 +6,6 @@ package Shapes.component;
  */
 public class Square extends Rectangle
 {
-    //private String shapeName;
     public Square(int sideA, String shapeName) {
         super(sideA, sideA, shapeName);
     }

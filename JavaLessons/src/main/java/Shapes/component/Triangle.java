@@ -7,7 +7,6 @@ import java.lang.Exception.*;
 
 public class Triangle extends Shape
 {
-    //private String shapeName = "Triangle";
     private int sideA;
     private int sideB;
     private int sideC;

@@ -35,9 +35,7 @@ public class WorkWithBooksInXML {
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, XPathExpressionException, TransformerException {
 
         File f = new File("src/main/java/WorkWithXML/Books.xml");
-        DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
+        DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 
         Document document = builder.parse(f);
 
@@ -64,8 +62,7 @@ public class WorkWithBooksInXML {
     }
 
     public static NodeList getElementWithSpecificAtributeValue(Document doc) throws XPathExpressionException {
-        XPathFactory xPathfactory = XPathFactory.newInstance();
-        XPath xpath = xPathfactory.newXPath();
+        XPath xpath = XPathFactory.newInstance().newXPath();
         XPathExpression expr;
         expr = xpath.compile("//Author[contains(text(), \"Dhirendra\")]/parent::Book");
         NodeList nl = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
@@ -79,7 +76,6 @@ public class WorkWithBooksInXML {
                 NodeList bookProps = book.getChildNodes();
                 for(int j = 0; j < bookProps.getLength(); j++) {
                     Node bookProp = bookProps.item(j);
-                    // Если нода не текст, то это один из параметров книги - печатаем
                     if (bookProp.getNodeType() != Node.TEXT_NODE) {
                         System.out.println(bookProp.getNodeName() + ":" + bookProp.getChildNodes().item(0)
                                 .getTextContent());

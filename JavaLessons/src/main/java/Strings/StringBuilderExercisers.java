@@ -1,9 +1,11 @@
-package OCAExample;
+package Strings;
 
 /**
  * User: tetiana.kryvets
  * Date: 10/19/17
  */
+
+//StringBuilder: find substring,  length, capacity and charAt()
 public class StringBuilderExercisers {
 
     public static void main (String[] arg){

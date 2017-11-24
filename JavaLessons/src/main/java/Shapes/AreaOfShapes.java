@@ -7,6 +7,8 @@ import Shapes.component.Triangle;
 
 import javax.swing.JFrame;
 
+// TASK: create  Triangle, Circle, Square and  Rectangle objects which inherit Shape class.
+// calculate Area of each shape.
 public class AreaOfShapes
 {
     public static void main(String[] args) {

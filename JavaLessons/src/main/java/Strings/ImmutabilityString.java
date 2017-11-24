@@ -1,9 +1,11 @@
-package OCAExample;
+package Strings;
 
 /**
  * User: tetiana.kryvets
  * Date: 10/15/17
  */
+//example with immutable string
+
 public class ImmutabilityString {
 
 

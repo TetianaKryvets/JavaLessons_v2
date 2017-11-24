@@ -1,4 +1,4 @@
-package OCAExample;
+package Strings;
 
 /**
  * User: tetiana.kryvets

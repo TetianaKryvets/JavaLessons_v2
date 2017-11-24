@@ -20,7 +20,6 @@ import java.util.Iterator;
     
 public class JSONParsing {
     public static void main(String[] args) throws IOException, ParseException {
-        String jsonStrusture = "";
         Object JSONFileObject = null;
         //create parser
         JSONParser parser = new JSONParser();
