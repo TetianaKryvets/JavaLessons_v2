@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><handbooks>
-    <handbook alias="default">
-        <customerName>A-Andriy</customerName>
-        <name>employee-handbook</name>
-        <displayName>Employee Handbook</displayName>
-        <id>729</id>
-    </handbook>
-<handbook><customerName>NewCustomer</customerName><name>NewHBName</name><displayName>NameOfHBForDisplaying</displayName><id>888</id></handbook></handbooks>
