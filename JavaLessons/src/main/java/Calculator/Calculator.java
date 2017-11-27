@@ -15,20 +15,23 @@ public class Calculator {
         return b;
     }
 
-    public Calculator(double a, double b) {
+    public void setA(double a) {
         this.a = a;
+    }
+
+    public void setB (double b) {
         this.b = b;
     }
 
-    public double multiply() {
+    public double multiply(double a, double b) {
         return a*b;
     }
 
-    public double divide() {
+    public double divide(double a, double b) {
         return a/b;
     }
 
-    public double exponentiate() {
+    public double exponentiate(double a, double b) {
         return  Math.pow(a, b);
     }
 

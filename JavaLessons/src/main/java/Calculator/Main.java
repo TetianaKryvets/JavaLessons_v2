@@ -17,17 +17,18 @@ package Calculator;
 public class Main  {
 
     public static void main (String[] args) {
+        Calculator calc = new Calculator();
         double resultOfMultiply = 0;
         double resultOfDivide = 0;
         double resultOfXxponentiate = 0;
 
-        resultOfMultiply = (new Calculator(2.0,3.0)).multiply();
+        resultOfMultiply = calc.multiply(2.0,3.0);
         System.out.println("resultOfMultiply = " + resultOfMultiply);
 
-        resultOfDivide = (new Calculator(6.0, 2.0).divide());
+        resultOfDivide = calc.divide(6.0, 2.0);
         System.out.println("resultOfMultiply = " + resultOfDivide);
 
-        resultOfXxponentiate = (new Calculator(6.0, 2.0).exponentiate());
+        resultOfXxponentiate = calc.exponentiate(6.0, 2.0);
         System.out.println("resultOfXxponentiate = " + resultOfXxponentiate);
 
 
