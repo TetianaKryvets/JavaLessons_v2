@@ -1,5 +1,7 @@
 package Calculator;
 
+import java.text.DecimalFormat;
+
 /**
  * User: tetiana.kryvets
  * Date: 11/26/2017
@@ -24,15 +26,22 @@ public class Calculator {
     }
 
     public double multiply(double a, double b) {
-        return a*b;
+        double result = a*b;
+        DecimalFormat df = new DecimalFormat("#.00");
+        return Double.parseDouble(df.format(result));
     }
 
     public double divide(double a, double b) {
-        return a/b;
+        double result = a/b;
+        DecimalFormat df = new DecimalFormat("#.00");
+        return Double.parseDouble(df.format(result));
+
     }
 
     public double exponentiate(double a, double b) {
-        return  Math.pow(a, b);
+        double result = Math.pow(a, b);
+        DecimalFormat df = new DecimalFormat("#.00");
+        return Double.parseDouble(df.format(result));
     }
 
 }
