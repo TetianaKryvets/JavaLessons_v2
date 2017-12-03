@@ -75,6 +75,7 @@ public class CalculatorTests {
             assertEquals("'Divide' method gives incorrect result: ", -23.0, calc.divide(31, 0));
         } catch (NumberFormatException ae) {
             System.out.println("NumberFormatException occured!");
+            assertEquals("'Divide' method gives incorrect result: ", -23.0, calc.divide(31, 0));
         }
     }
 
